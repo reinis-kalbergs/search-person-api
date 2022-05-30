@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -35,8 +34,7 @@ public class PersonService {
         return personOptional.get();
     }
 
-    @Transactional
-    Optional<Person> findPersonInDatabase(String personalId, LocalDate dateOfBirth) {
+    private Optional<Person> findPersonInDatabase(String personalId, LocalDate dateOfBirth) {
         return personRepository.findByPersonalIdAndDateOfBirth(personalId, dateOfBirth);
     }
 

@@ -1,6 +1,5 @@
 package com.example.searchpersonapi.service;
 
-import com.example.searchpersonapi.model.Person;
 import com.example.searchpersonapi.repository.PersonRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
